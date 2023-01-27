@@ -1,0 +1,59 @@
+<!--this template is going to be the exact
+same base.html and this can override any blocks
+that defined inside of base.html-->
+{% extends "base.html"%}
+<!--we can override any block
+for example below-->
+{% block title %}
+Sign Up
+{% endblock %}
+
+{% block content %}
+<form method="POST">
+    <h3 align="center">Sign Up</h3>
+    <div class="from=grop">
+        <label for="email">Email Address</label>
+        <!--We will be able to access the email address
+        by its name is defined here below-->
+        <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            placeholder="Enter email"
+        />
+    </div>
+    <div class="from=grop">
+        <label for="firstName">First Name</label>
+        <input
+            type="text"
+            class="form-control"
+            id="firstName"
+            name="firstName"
+            placeholder="Enter first name"
+        />
+    </div>
+    <div class="from=grop">
+        <label for="password1">Password</label>
+        <input
+            type="password"
+            class="form-control"
+            id="password1"
+            name="password1"
+            placeholder="Enter password"
+        />
+    </div>
+    <div class="from=grop">
+        <label for="password2">Password (Cofirm)</label>
+        <input
+            type="password"
+            class="form-control"
+            id="password2"
+            name="password2"
+            placeholder="Confirm password"
+        />
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}
